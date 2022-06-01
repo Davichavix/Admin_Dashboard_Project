@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Notes
+
+1. utilize ternary operator to render compoenents given true variable
+```
+          {activeMenu ? (
+            <div>
+              Sidebar
+            </div>
+          ) : (
+            <div>
+              Sidebar w-0
+            </div>
+          )}
+```
