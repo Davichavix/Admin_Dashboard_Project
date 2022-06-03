@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-### Notes
+### David's Notes
 
 1. utilize ternary operator to render compoenents given true variable
 ```
@@ -23,7 +23,7 @@ In the project directory, you can run:
           )}
 ```
 
-2. utilize template literals and ternary operators to reduce repeat code when using conditioanl className
+2. utilize template literals and ternary operators to reduce repeat code when using conditional className
 
 ```
           <div className={ 
