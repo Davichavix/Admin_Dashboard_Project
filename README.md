@@ -22,3 +22,11 @@ In the project directory, you can run:
             </div>
           )}
 ```
+
+2. utilize template literals and ternary operators to reduce repeat code when using conditioanl className
+
+```
+          <div className={ 
+            `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu} ? 'md:ml-72 : flex-2`
+          }>
+```
