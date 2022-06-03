@@ -39,7 +39,29 @@ const App = () => {
             `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu} ? 'md:ml-72 : flex-2`
           }>
 
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
+              Navbar
+            </div>
           </div>
+
+          <div>
+            <Routes>
+              {/* Dashboard */}
+              <Route path="/" element="Ecommerce"/>
+              <Route path="/ecommerce" element="Ecommerce"/>
+              {/* Pages */}
+              <Route path="/orders" element="Orders"/>
+              <Route path="/employees" element="Employees"/>
+              <Route path="/customers" element="Customers"/>
+
+              {/* Apps */}
+              <Route path="/kanban" element="Kanban"/>
+              <Route path="/kanban" element="Kanban"/>
+              <Route path="/kanban" element="Kanban"/>
+              <Route path="/kanban" element="Kanban"/>
+            </Routes>
+          </div>
+
         </div>
       </BrowserRouter>
     </div>
