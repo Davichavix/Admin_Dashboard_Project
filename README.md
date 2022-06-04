@@ -84,8 +84,7 @@ import { SiShopware } from 'react-icons/si'
 
 ```
 
-6. Map over array of items in components for more succinct code. (Used for menu items etc)
-
+6. Map over array of items in components for more succinct code.
 ```
         <div className="mt-10">
           {links.map((item) => (
@@ -94,4 +93,97 @@ import { SiShopware } from 'react-icons/si'
             </div>
           ))}
         </div>
+```
+
+7. Save links in array of objects allowing easy access to rendering link and titles for sidebar
+```
+export const links = [
+  {
+    title: 'Dashboard',
+    links: [
+      {
+        name: 'ecommerce',
+        icon: <FiShoppingBag />,
+      },
+    ],
+  },
+
+  {
+    title: 'Pages',
+    links: [
+      {
+        name: 'orders',
+        icon: <AiOutlineShoppingCart />,
+      },
+      {
+        name: 'employees',
+        icon: <IoMdContacts />,
+      },
+      {
+        name: 'customers',
+        icon: <RiContactsLine />,
+      },
+    ],
+  },
+  {
+    title: 'Apps',
+    links: [
+      {
+        name: 'calendar',
+        icon: <AiOutlineCalendar />,
+      },
+      {
+        name: 'kanban',
+        icon: <BsKanban />,
+      },
+      {
+        name: 'editor',
+        icon: <FiEdit />,
+      },
+      {
+        name: 'color-picker',
+        icon: <BiColorFill />,
+      },
+    ],
+  },
+  {
+    title: 'Charts',
+    links: [
+      {
+        name: 'line',
+        icon: <AiOutlineStock />,
+      },
+      {
+        name: 'area',
+        icon: <AiOutlineAreaChart />,
+      },
+
+      {
+        name: 'bar',
+        icon: <AiOutlineBarChart />,
+      },
+      {
+        name: 'pie',
+        icon: <FiPieChart />,
+      },
+      {
+        name: 'financial',
+        icon: <RiStockLine />,
+      },
+      {
+        name: 'color-mapping',
+        icon: <BsBarChart />,
+      },
+      {
+        name: 'pyramid',
+        icon: <GiLouvrePyramid />,
+      },
+      {
+        name: 'stacked',
+        icon: <AiOutlineBarChart />,
+      },
+    ],
+  },
+];
+
 ```
