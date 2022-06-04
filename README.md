@@ -83,3 +83,15 @@ export { default as Header } from './Header';
 import { SiShopware } from 'react-icons/si'
 
 ```
+
+6. Map over array of items in components for more succinct code. (Used for menu items etc)
+
+```
+        <div className="mt-10">
+          {links.map((item) => (
+            <div className="text-gray-400 m-3 mt-4 uppercase">
+              {item.title}
+            </div>
+          ))}
+        </div>
+```

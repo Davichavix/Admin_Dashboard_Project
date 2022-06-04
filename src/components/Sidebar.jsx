@@ -20,6 +20,22 @@ const Sidebar = () => {
           tracking-tight dark:text-white text-slate-900">
             <SiShopware/> <span>Shoppy</span>
           </Link>
+          <TooltipComponent content="Menu" 
+          position="BottomCenter">
+            <button type="button"
+            onClick={() => {}}
+            className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+            >
+              <MdOutlineCancel />
+            </button>
+          </TooltipComponent>
+        </div>
+        <div className="mt-10">
+          {links.map((item) => (
+            <div className="text-gray-400 m-3 mt-4 uppercase">
+              {item.title}
+            </div>
+          ))}
         </div>
       </>)}
     </div>
