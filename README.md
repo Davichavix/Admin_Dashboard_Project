@@ -77,3 +77,9 @@ export { default as ChartsHeader } from './ChartsHeader';
 export { default as Header } from './Header';
 
 ```
+
+5. Use pre-build react icons by importing
+```
+import { SiShopware } from 'react-icons/si'
+
+```
