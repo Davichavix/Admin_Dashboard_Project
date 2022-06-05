@@ -188,7 +188,8 @@ export const links = [
 
 ```
 
-8. Store multiple initial states in single stateobject
+8. Store multiple initial states in single stateobject 
+ - State should be held by the highest parent component in the stack that requires access to the state
 
 ```
 const initialState = {
