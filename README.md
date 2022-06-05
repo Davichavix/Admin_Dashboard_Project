@@ -187,3 +187,15 @@ export const links = [
 ];
 
 ```
+
+8. Store multiple initial states in single stateobject
+
+```
+const initialState = {
+  chat: false,
+  cart: false,
+  userProfile: false,
+  notification: false,
+}
+
+```
