@@ -242,6 +242,8 @@ export const ContextProvider = ({ children }) => {
     )
 }
 
+```
+```
 export const useStateContext = () => useContext(StateContext);
 
 //index.js (Entire App must be wrapped in context provider)
@@ -255,6 +257,8 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
+```
+```
 //App.js (Required to import useStateContext to each component allowing access to activeMenu value)
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -263,6 +267,8 @@ const App = () => {
   const { activeMenu } = useStateContext()
   ...
 
+```
+```
 //Sidebar.jsx
 
 import { useStateContext } from '../contexts/ContextProvider';
