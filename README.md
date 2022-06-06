@@ -242,10 +242,10 @@ export const ContextProvider = ({ children }) => {
     )
 }
 
-```
-```
 export const useStateContext = () => useContext(StateContext);
 
+```
+```
 //index.js (Entire App must be wrapped in context provider)
 
 import { ContextProvider } from './contexts/ContextProvider';
