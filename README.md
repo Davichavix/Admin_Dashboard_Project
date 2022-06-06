@@ -255,6 +255,14 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
+//App.js (Required to import useStateContext to each component allowing access to activeMenu value)
+
+import { useStateContext } from './contexts/ContextProvider';
+
+const App = () => {
+  const { activeMenu } = useStateContext()
+  ...
+
 //Sidebar.jsx
 
 import { useStateContext } from '../contexts/ContextProvider';
