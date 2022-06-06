@@ -204,6 +204,14 @@ const initialState = {
 9. Using context, we can avoid passing props through intermediate elements
  -  Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider
  - All consumers that are descendants of a Provider will re-render whenever the Provider’s value prop changes
+ - When to use context:
+    - global state
+    - theme
+    - application configuration
+    - authenticated user name
+    - user settings
+    - preferred language
+    - a collection of services
 
 ```
 //ContextProvider.js
