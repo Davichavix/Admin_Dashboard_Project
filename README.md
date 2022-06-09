@@ -279,9 +279,12 @@ const Sidebar = () => {
 ```
 
 10. Create Button components that take custom props to allow for unique functionality while maintaining reusability
+- customFunc is function that is customizable
+- icon is custom icon
+- color is custom color
 
 ```
-const NavButton = ({title, customFunc, icon, color ,dotColor}) => (
+const NavButton = ({title, customFunc, icon, color , dotColor}) => (
   <TooltipComponent content={title}
   position="BottomCener">
     <button type="button" 
