@@ -27,7 +27,7 @@ const NavButton = ({title, customFunc, icon, color ,dotColor}) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } = useStateContext();
   return (
     <div className = "flex justify-between p-2 md:mx-6 relative">
       <NavButton title="Menu" customFunc={() => setActiveMenu((prevActiveMenu) => 
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex">
           <NavButton 
             title="Cart" 
-            // customFunc={() => handleClick('cart')} 
+            customFunc={() => handleClick('cart')} 
             color="blue" 
             icon={<FiShoppingCart /> }
           />
@@ -47,7 +47,7 @@ const Navbar = () => {
           <NavButton 
             title="Chat"
             dotColor="#03C9D7"
-            // customFunc={() => handleClick('chat')} 
+            customFunc={() => handleClick('chat')} 
             color="blue" 
             icon={<BsChatLeft /> }
           />
@@ -55,7 +55,7 @@ const Navbar = () => {
           <NavButton 
             title="Notifications"
             dotColor="#03C9D7"
-            // customFunc={() => handleClick('notification')} 
+            customFunc={() => handleClick('notification')} 
             color="blue" 
             icon={<RiNotification3Line /> }
           />
@@ -66,7 +66,7 @@ const Navbar = () => {
           >
             <div className=" flex items-center 
             gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
-            // onClick={() => handleClick('userProfile')}
+            onClick={() => handleClick('userProfile')}
             >
               <img
                 className="rounded-full w-8 h-8"
@@ -82,6 +82,11 @@ const Navbar = () => {
             </div>
 
           </TooltipComponent>
+
+          {isClicked.cart && <Cart />}
+          {isClicked.chat && <Chat />}
+          {isClicked.notification && <Notification />}
+          {isClicked.userProfile && <UserProfile />}
         </div>
     </div>
     

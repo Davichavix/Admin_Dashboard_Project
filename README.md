@@ -318,3 +318,49 @@ const Navbar = () => {
   )
 }
 ```
+
+11. when state is an object - subsequent state values can be accessed as keys 
+
+```
+const initialState = {
+  chat: false,
+  cart: false,
+  userProfile: false,
+  notification: false,
+
+```
+```
+{isClicked.cart && <Cart />}
+{isClicked.chat && <Chat />}
+{isClicked.notification && <Notification />}
+{isClicked.userProfile && <UserProfile />}
+
+```
+
+12. Use spread operator to update object value for cleaner code
+  
+
+```
+setClicked("cart") will change isClicked.cart => true
+
+```
+
+```
+const initialState = {
+  chat: false,
+  cart: false,
+  userProfile: false,
+  notification: false,
+}
+
+export const ContextProvider = ({ children }) => {
+  const [activeMenu, setActiveMenu] = useState(true);
+  const [isClicked, setIsClicked] = useState(initialState);
+
+
+// handClick function changes initialState key to true
+  const handleClick = (clicked) => {
+    setIsClicked({...initialState, [clicked]: true});
+  }
+
+```
