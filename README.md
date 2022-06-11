@@ -358,9 +358,47 @@ export const ContextProvider = ({ children }) => {
   const [isClicked, setIsClicked] = useState(initialState);
 
 
-// handClick function changes initialState key to true
+// handleClick function changes initialState key to true
   const handleClick = (clicked) => {
     setIsClicked({...initialState, [clicked]: true});
   }
 
 ```
+
+13. Combination of state and useEffect can be used to setScreensize for responsive design
+- NavBar dissapears if screensize width is smaller than 900px
+
+  1. useState is used to set initial screen size to undefined
+  2. useEffect upon refresh adds the "resize" event listener to the window
+  3. A handleResize function is called that sets screenSize to the initial innerWidth of the window
+  4. immediately after the resize event listener is removed from window (removeEventListener should contain both the type 'resize' and listener function 'handleResize)
+  5. Second useEffect is used to to call setActiveMenu(true || false) upon changes in the screenSize state
+
+```
+  const [screenSize, setScreenSize] = useState(undefined);
+
+```
+
+```
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  ```
+
+  ```
+    useEffect(() => {
+    if(screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
+
+  ```
