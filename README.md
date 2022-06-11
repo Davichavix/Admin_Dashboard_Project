@@ -366,13 +366,14 @@ export const ContextProvider = ({ children }) => {
 ```
 
 13. Combination of state and useEffect can be used to setScreensize for responsive design
-- NavBar dissapears if screensize width is smaller than 900px
+- Sidebar hides if screensize width is smaller than 900px
 
   1. useState is used to set initial screen size to undefined
   2. useEffect upon refresh adds the "resize" event listener to the window
   3. A handleResize function is called that sets screenSize to the initial innerWidth of the window
   4. immediately after the resize event listener is removed from window (removeEventListener should contain both the type 'resize' and listener function 'handleResize)
   5. Second useEffect is used to to call setActiveMenu(true || false) upon changes in the screenSize state
+  6. Additional UI improvements include closing the side bar upon clicking link in Sidebar (For mobile application only)
 
 ```
   const [screenSize, setScreenSize] = useState(undefined);
