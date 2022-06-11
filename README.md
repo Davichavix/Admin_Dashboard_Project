@@ -403,3 +403,33 @@ export const ContextProvider = ({ children }) => {
   }, [screenSize]);
 
   ```
+
+  14. Template for reusable react button (Pass styles as props to button component allows for reusable code)
+    1. bgColor - background color
+    2. color - font color
+    3. button size
+    4. name of the button
+
+  ```
+              <Button 
+              color="white"
+              bgColor="blue"
+              text="Download"
+              borderRadius="10px"
+              size="md"
+            />
+  ```
+  ```
+    //Button.jsx
+  const Button = ({ bgColor, color, size, text, borderRadius}) => {
+    return (
+      <button 
+        type="button"
+        style={{backgroundColor: bgColor, color, borderRadius}}
+        className={`text-${size} p-3 hover:drop-shadow-xl`}
+      >
+        {text}
+      </button>
+    )
+  }
+  ```
