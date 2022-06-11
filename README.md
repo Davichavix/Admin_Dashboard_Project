@@ -404,7 +404,8 @@ export const ContextProvider = ({ children }) => {
 
   ```
 
-  14. Template for reusable react button (Pass styles as props to button component allows for reusable code)
+  14. Template for reusable react button 
+  - (Pass styles as props to button component allows for reusable code)
     1. bgColor - background color
     2. color - font color
     3. button size
@@ -432,4 +433,5 @@ export const ContextProvider = ({ children }) => {
       </button>
     )
   }
+  s
   ```
