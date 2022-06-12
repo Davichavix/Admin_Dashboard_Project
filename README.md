@@ -443,7 +443,7 @@ export const ContextProvider = ({ children }) => {
 
 
   16. Prop Spreading in React 
-  - if props is an object, the spread operator can be used to pass all the props to the componenent
+  - if props is an object, the spread operator can be used to pass all the props to the component
   ```
   const App = () => {
   const props = {
