@@ -469,14 +469,17 @@ export const ContextProvider = ({ children }) => {
 17. When using the map() function to render multiple componenets a unique key should be given to elements.
 - if  stable IDs are not availabe as keys, the item index can be used as a last resort however this is not recommended.
 ```
-function ListItem(props) {
-  const value = props.value;
+const Orders = () => {
   return (
-    // Wrong! There is no need to specify the key here:
-    <li key={value.toString()}>
-      {value}
-    </li>
-  );
+    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+      <Header category="Page" title="Orders" />
+        <GridComponent>
+          <ColumnsDirective>
+            {ordersGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
+          </ColumnsDirective>
+        </GridComponent>
+    </div>
+  )
 }
 
 ```
