@@ -440,3 +440,28 @@ export const ContextProvider = ({ children }) => {
   - Block elements typically cause a line break to occur
     1. A block level element occupies the entire horizontal space of its parent container (ex.<p>)
   - [See Flow Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout)
+
+
+  16. Prop Spreading in React 
+  - if props is an object, the spread operator can be used to pass all the props to the componenent
+  ```
+  const App = () => {
+  const props = {
+    name: "John", 
+    surname: "Doe",
+  };
+  return <User {...props} />;
+}
+
+  ```
+
+  ```
+  const App = () => {
+    const props = {
+      name: "John", 
+      surname: "Doe",
+    };
+    return <User name={props.name} surname={props.surname} />;
+  }
+
+  ```
