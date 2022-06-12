@@ -434,3 +434,9 @@ export const ContextProvider = ({ children }) => {
     )
   }
   ```
+
+  15. Inline vs. block-level elements
+  - Inline - by default inline elements do not force a new line to begin in the document flow. (ex.<span>)
+  - Block elements typically cause a line break to occur
+    1. A block level element occupies the entire horizontal space of its parent container (ex.<p>)
+  - [See Flow Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout)
